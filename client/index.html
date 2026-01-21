@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clean, modern AI chat interface">
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>AI Chat</h1>
+                </div>
+                <div class="status-indicator" role="status" aria-live="polite">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span id="status-text">Online</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Chat -->
+        <main class="chat-container" role="main">
+
+            <!-- Messages -->
+            <div class="messages-wrapper" id="messages-wrapper" role="log" aria-live="polite">
+                <div class="messages-container" id="messages-container">
+
+                    <!-- Empty State -->
+                    <div class="empty-state" id="empty-state">
+                        <h2>How can I help you today?</h2>
+                        <p>Ask me anything and I'll do my best to assist you.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="input-wrapper">
+                <form class="input-container" id="chat-form" onsubmit="sendMessage(event)">
+                    <div class="input-field">
+                        <textarea id="message-input" placeholder="Message AI Chat..." rows="1"
+                            aria-label="Message input" required></textarea>
+                    </div>
+                    <button type="submit" class="send-button" id="send-button" aria-label="Send message">
+                        Send
+                    </button>
+                </form>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="env.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
